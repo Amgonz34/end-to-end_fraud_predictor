@@ -8,12 +8,12 @@ command:
       pip install -r requirements.txt
       python app.py
 repositories:
-   dataset: <fraud-dataset-id>
+   dataset: ds690ulp8pwm3ev
    mountPath: /opt/repos
    repositories:
-      - url: <your-github-repo-url>
+      - url: https://github.com/Amgonz34/end-to-end_fraud_predictor.git
       name: repo
-      ref: master
+      ref: main
 resources:
    replicas: 1
    instanceType: C5
