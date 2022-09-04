@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fraud-classifier
+spec:
+  selector:
+    matchLabels:
+      app: fraud-classifier
+  template:
+    metadata:
+      labels:
+        app: fraud-classifier
+    spec:
+      containers:
+      - name: fraud-classifier
+        image: fraud-classifier:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
